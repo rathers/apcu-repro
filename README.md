@@ -51,3 +51,5 @@ time curl http://localhost/apc-bench.php
 
 You should see the response times remain consistent until you reach the tipping point, whereupon they will increase exponentially.
 
+At the tipping point you should also notice that the CPU is not saturated so this is not caused simply by running out of CPU. Another way you can prove this is to get the rate to just below the tipping point and then manually inject a few requests with curl in quick succession. This wmight be enough to tip it and the apache procs will spiral.
+
